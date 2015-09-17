@@ -4,10 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ER.Data.DomainObjects
+namespace ER.Data
 {
     public class ProductSellerAssociation
     {
+        public int ProductId { get; set; }
+        public int SellerId { get; set; }
         public Product Product { get; set; }
         public Seller Seller { get; set; }
         public Uri ProductLink { get; set; }

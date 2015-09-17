@@ -1,7 +1,7 @@
-﻿using ER.Data.DomainObjects;
+﻿using ER.Data;
 using System.Collections.Generic;
 
-namespace ER.Data
+namespace ER.DataAccess
 {
     interface ISellerRepository
     {

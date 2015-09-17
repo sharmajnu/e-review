@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ER.Data.DomainObjects
+namespace ER.Data
 {
     public class ProductCategory
     {
-        public int Key { get; set; }
+        public int ProductCategoryId { get; set; }
         public string Name { get; set; }
     }
 }
