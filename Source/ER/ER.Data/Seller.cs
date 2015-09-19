@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace ER.Data
 {
@@ -11,6 +7,7 @@ namespace ER.Data
         public int SellerId { get; set; }
         public string Name { get; set; }
         public string Url { get; set; }
-        public Dictionary<string,string> PropertyCollection { get; set; }
+        public List<SellerProperty> Properties { get; set; }
+        public List<Product> Products { get; set; }
     }
 }
