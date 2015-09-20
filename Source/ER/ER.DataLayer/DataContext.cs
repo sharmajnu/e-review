@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ER.DataAccess
+namespace ER.DataLayer
 {
     public class DataContext : DbContext
     {
@@ -18,6 +18,7 @@ namespace ER.DataAccess
         public DbSet<ProductSellerAssociation> ProductSellerAssociations { get; set; }
         public DbSet<SellerProperty> SellerProperties { get; set; }
         public DbSet<ProductProperty> ProductProperties { get; set; }
+        public DbSet<ProductPropertyCategory> ProductPropertyCategories { get; set; }
 
         public DataContext()
             : base()
@@ -27,6 +28,13 @@ namespace ER.DataAccess
         public DataContext(string connectionString)
             : base(connectionString)
         {
+        }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<SellerProperty>().HasKey(x => new { x.SellerId, x.Name });
+            modelBuilder.Entity<ProductProperty>().HasKey(x => new { x.ProductId, x.Name });
+            base.OnModelCreating(modelBuilder);
         }
 
         public static DataContext CreateNew()

@@ -11,6 +11,6 @@ namespace ER.Data
         public string Name { get; set; }
         public string Value { get; set; }
         public int SellerId { get; set; }
-        public Seller Seller { get; set; }
+        public virtual Seller Seller { get; set; }
     }
 }

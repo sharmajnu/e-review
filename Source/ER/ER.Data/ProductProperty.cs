@@ -11,7 +11,7 @@ namespace ER.Data
         public string Name { get; set; }
         public string Value { get; set; }
         public int ProductId { get; set; }
-        public Product Product { get; set; }
+        public virtual Product Product { get; set; }
         public int ProductPropertyCategoryId { get; set; }
         public ProductPropertyCategory ProductPropertyCategory { get; set; }
     }

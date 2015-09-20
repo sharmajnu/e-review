@@ -1,0 +1,16 @@
+Package manager commands and steps to auto generate repositories
+
+1. Install Entity Framework
+
+ install-package entityframework
+
+2. Install T4Scaffolding
+
+ install-package t4scaffholding
+
+3. Generate Repository
+
+ scaffold repository ER.Data.Seller -DbContextType: DataContext
+
+ scaffold repository ER.Data.Product -DbContextType: DataContext
+
